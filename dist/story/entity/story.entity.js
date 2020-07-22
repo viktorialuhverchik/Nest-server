@@ -50,7 +50,7 @@ __decorate([
     __metadata("design:type", genre_entity_1.Genre)
 ], Story.prototype, "genre", void 0);
 __decorate([
-    typeorm_1.OneToMany(type => chapter_entity_1.Chapter, chapter => chapter.story),
+    typeorm_1.OneToMany(type => chapter_entity_1.Chapter, chapter => chapter.story, { cascade: true }),
     __metadata("design:type", Array)
 ], Story.prototype, "chapters", void 0);
 __decorate([

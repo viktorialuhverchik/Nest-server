@@ -29,6 +29,19 @@ export class StoryService {
         );
     }
 
+    getStoriesByUserId(id: number): Promise<Story[]> {
+        return this.storyRepository.find(
+            {
+            relations: ['genre', 'tags', 'chapters', 'user'],
+                where: {
+                    user: {
+                        id: id
+                    }
+                }
+            }
+        );
+    }
+
     async create(story: Story): Promise<Story> {
         return this.storyRepository.save(story);
     }

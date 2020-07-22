@@ -13,13 +13,11 @@ export class StoryController {
         private readonly tagService: TagService
     ) {}
 
-    @UseGuards(JwtAuthGuard)
     @Get('all')
     findAll() {
         return this.storyService.findAll();
     }
 
-    @UseGuards(JwtAuthGuard)
     @Get(':id')
     findOne(@Param('id') id: number) {
         return this.storyService.findOne(id);

@@ -9,9 +9,9 @@ import { Entities } from "./entities";
 
 @Module({
   imports: [
+      StoryModule,
       UserModule,
       AuthModule,
-      StoryModule,
       TypeOrmModule.forRoot({
         type: 'mysql',
         host: 'localhost',

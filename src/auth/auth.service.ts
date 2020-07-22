@@ -24,6 +24,7 @@ export class AuthService {
         await this.usersService.updateLastLogin(user.id, new Date());
         return {
             token: this.jwtService.sign(payload),
+            id: user.id
         };
     }
 }

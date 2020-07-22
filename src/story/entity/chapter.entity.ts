@@ -9,7 +9,7 @@ export class Chapter {
     @Column({ length: 200 })
     heading: string;
 
-    @Column()
+    @Column({ length: 5000 })
     text: string;
 
     @Column()

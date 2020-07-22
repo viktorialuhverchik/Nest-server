@@ -23,7 +23,7 @@ __decorate([
     __metadata("design:type", String)
 ], Chapter.prototype, "heading", void 0);
 __decorate([
-    typeorm_1.Column(),
+    typeorm_1.Column({ length: 5000 }),
     __metadata("design:type", String)
 ], Chapter.prototype, "text", void 0);
 __decorate([

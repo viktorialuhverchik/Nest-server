@@ -24,6 +24,6 @@ async function bootstrap() {
       }),
   );
 
-  await app.listen(3000, '192.168.0.12');
+  await app.listen(3000, '192.168.0.10');
 }
 bootstrap();

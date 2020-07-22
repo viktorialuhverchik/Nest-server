@@ -1,11 +1,15 @@
-import {BadRequestException, Body, Controller, Delete, Get, Put, UseGuards, Param} from '@nestjs/common';
+import { BadRequestException, Body, Controller, Delete, Get, Put, UseGuards, Param } from '@nestjs/common';
 import { UserService } from "./user.service";
+import { StoryService } from "../story/story.service";
 import { JwtAuthGuard } from "../auth/guard/jwt-auth.guard";
 import { User } from "./entity/user.entity";
 
 @Controller('users')
 export class UserController {
-    constructor(private readonly userService: UserService) {}
+    constructor(
+        private readonly userService: UserService,
+        private readonly storyService: StoryService,
+    ) {}
 
     @UseGuards(JwtAuthGuard)
     @Get('all')
@@ -17,6 +21,12 @@ export class UserController {
     @Get(':id')
     findOne(@Param('id') id: number) {
         return this.userService.findOne(id);
+    }
+
+    @UseGuards(JwtAuthGuard)
+    @Get(':id/stories')
+    getUserStories(@Param('id') id: number) {
+        return this.storyService.getStoriesByUserId(id);
     }
 
     @UseGuards(JwtAuthGuard)

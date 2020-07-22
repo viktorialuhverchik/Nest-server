@@ -27,14 +27,7 @@ export class UserService {
     }
 
     findOne(id: number): Promise<User> {
-        return this.usersRepository.findOne(
-            {
-                relations: ['stories', 'genre', 'tags', 'chapters'],
-                where: {
-                    id: id
-                }
-            }
-        );
+        return this.usersRepository.findOne(id);
     }
 
     findOneByEmail(email: string): Promise<User> {

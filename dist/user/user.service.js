@@ -34,12 +34,7 @@ let UserService = class UserService {
         return this.usersRepository.find();
     }
     findOne(id) {
-        return this.usersRepository.findOne({
-            relations: ['stories', 'genre', 'tags', 'chapters'],
-            where: {
-                id: id
-            }
-        });
+        return this.usersRepository.findOne(id);
     }
     findOneByEmail(email) {
         return this.usersRepository

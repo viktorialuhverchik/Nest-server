@@ -12,11 +12,13 @@ import { GenreService } from './genre/genre.service';
 import { TagService } from './tag/tag.service';
 
 @Module({
-    imports: [TypeOrmModule.forFeature([
-        Story, Genre, Chapter, Tag
-    ])],
+    imports: [
+        TypeOrmModule.forFeature([
+            Story, Genre, Chapter, Tag
+        ])
+    ],
     controllers: [StoryController, GenreController, TagController],
     providers: [StoryService, GenreService, TagService],
-    exports: []
+    exports: [StoryService]
 })
 export class StoryModule {}

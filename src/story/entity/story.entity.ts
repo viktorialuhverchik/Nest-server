@@ -34,7 +34,7 @@ export class Story {
     @JoinTable()
     genre: Genre;
 
-    @OneToMany(type => Chapter, chapter => chapter.story)
+    @OneToMany(type => Chapter, chapter => chapter.story, { cascade: true })
     chapters: Chapter[];
 
     @ManyToMany(type => Tag)

@@ -8,5 +8,6 @@ export declare class AuthService {
     validateUser(email: string, password: string): Promise<User | null>;
     login(user: any): Promise<{
         token: string;
+        id: any;
     }>;
 }

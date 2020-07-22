@@ -5,5 +5,6 @@ export declare class StoryService {
     constructor(storyRepository: Repository<Story>);
     findAll(): Promise<Story[]>;
     findOne(id: number): Promise<Story>;
+    getStoriesByUserId(id: number): Promise<Story[]>;
     create(story: Story): Promise<Story>;
 }

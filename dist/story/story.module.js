@@ -23,12 +23,14 @@ let StoryModule = class StoryModule {
 };
 StoryModule = __decorate([
     common_1.Module({
-        imports: [typeorm_1.TypeOrmModule.forFeature([
+        imports: [
+            typeorm_1.TypeOrmModule.forFeature([
                 story_entity_1.Story, genre_entity_1.Genre, chapter_entity_1.Chapter, tag_entity_1.Tag
-            ])],
+            ])
+        ],
         controllers: [story_controller_1.StoryController, genre_controller_1.GenreController, tag_controller_1.TagController],
         providers: [story_service_1.StoryService, genre_service_1.GenreService, tag_service_1.TagService],
-        exports: []
+        exports: [story_service_1.StoryService]
     })
 ], StoryModule);
 exports.StoryModule = StoryModule;

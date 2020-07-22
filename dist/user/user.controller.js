@@ -15,16 +15,21 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserController = void 0;
 const common_1 = require("@nestjs/common");
 const user_service_1 = require("./user.service");
+const story_service_1 = require("../story/story.service");
 const jwt_auth_guard_1 = require("../auth/guard/jwt-auth.guard");
 let UserController = class UserController {
-    constructor(userService) {
+    constructor(userService, storyService) {
         this.userService = userService;
+        this.storyService = storyService;
     }
     findAll() {
         return this.userService.findAll();
     }
     findOne(id) {
         return this.userService.findOne(id);
+    }
+    getUserStories(id) {
+        return this.storyService.getStoriesByUserId(id);
     }
     async updateUsersStatus(users, command) {
         try {
@@ -62,6 +67,14 @@ __decorate([
 ], UserController.prototype, "findOne", null);
 __decorate([
     common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
+    common_1.Get(':id/stories'),
+    __param(0, common_1.Param('id')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Number]),
+    __metadata("design:returntype", void 0)
+], UserController.prototype, "getUserStories", null);
+__decorate([
+    common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
     common_1.Put('update-status'),
     __param(0, common_1.Body('users')),
     __param(1, common_1.Body('command')),
@@ -79,7 +92,8 @@ __decorate([
 ], UserController.prototype, "deleteUsers", null);
 UserController = __decorate([
     common_1.Controller('users'),
-    __metadata("design:paramtypes", [user_service_1.UserService])
+    __metadata("design:paramtypes", [user_service_1.UserService,
+        story_service_1.StoryService])
 ], UserController);
 exports.UserController = UserController;
 //# sourceMappingURL=user.controller.js.map

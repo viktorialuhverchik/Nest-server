@@ -11,7 +11,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TagController = void 0;
 const common_1 = require("@nestjs/common");
-const jwt_auth_guard_1 = require("../../auth/guard/jwt-auth.guard");
 const tag_service_1 = require("./tag.service");
 let TagController = class TagController {
     constructor(tagService) {
@@ -22,7 +21,6 @@ let TagController = class TagController {
     }
 };
 __decorate([
-    common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
     common_1.Get('all'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),

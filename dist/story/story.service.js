@@ -34,6 +34,16 @@ let StoryService = class StoryService {
             }
         });
     }
+    getStoriesByUserId(id) {
+        return this.storyRepository.find({
+            relations: ['genre', 'tags', 'chapters', 'user'],
+            where: {
+                user: {
+                    id: id
+                }
+            }
+        });
+    }
     async create(story) {
         return this.storyRepository.save(story);
     }

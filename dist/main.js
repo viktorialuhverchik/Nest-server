@@ -21,7 +21,7 @@ async function bootstrap() {
         windowMs: 15 * 60 * 1000,
         max: 100,
     }));
-    await app.listen(3000, '192.168.0.12');
+    await app.listen(3000, '192.168.0.10');
 }
 bootstrap();
 //# sourceMappingURL=main.js.map

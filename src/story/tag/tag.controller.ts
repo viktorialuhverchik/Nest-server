@@ -7,7 +7,6 @@ import { Tag } from '../entity/tag.entity';
 export class TagController {
     constructor(private readonly tagService: TagService) {}
 
-    @UseGuards(JwtAuthGuard)
     @Get('all')
     findAll() {
         return this.tagService.findAll();

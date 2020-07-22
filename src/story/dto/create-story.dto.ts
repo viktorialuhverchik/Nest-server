@@ -1,6 +1,6 @@
 import { IsNotEmpty, IsString } from 'class-validator';
-import {Genre} from "../entity/genre.entity";
-import {Chapter} from "../entity/chapter.entity";
+import { Genre } from "../entity/genre.entity";
+import { Chapter } from "../entity/chapter.entity";
 
 export class CreateStoryDto {
     @IsString()

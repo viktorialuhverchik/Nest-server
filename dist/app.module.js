@@ -18,9 +18,9 @@ let AppModule = class AppModule {
 AppModule = __decorate([
     common_1.Module({
         imports: [
+            story_module_1.StoryModule,
             user_module_1.UserModule,
             auth_module_1.AuthModule,
-            story_module_1.StoryModule,
             typeorm_1.TypeOrmModule.forRoot({
                 type: 'mysql',
                 host: 'localhost',
