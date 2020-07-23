@@ -52,7 +52,7 @@ export class Story {
     @JoinTable()
     rating: Rating[];
 
-    @ManyToOne(type => Comment, comments => comments.story)
+    @ManyToMany(type => Comment)
     @JoinTable()
     comments: Comment[];
 

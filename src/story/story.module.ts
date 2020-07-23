@@ -10,14 +10,14 @@ import { GenreController } from "./genre/genre.controller";
 import { TagController } from './tag/tag.controller';
 import { GenreService } from './genre/genre.service';
 import { TagService } from './tag/tag.service';
-import { Likes } from './entity/likes.entity';
+import { Like } from './entity/like.entity';
 import { Rating } from './entity/rating.entity';
 import { Comment } from './entity/comment.entity';
 
 @Module({
     imports: [
         TypeOrmModule.forFeature([
-            Story, Genre, Chapter, Tag, Likes, Rating, Comment
+            Story, Genre, Chapter, Tag, Like, Rating, Comment
         ])
     ],
     controllers: [StoryController, GenreController, TagController],

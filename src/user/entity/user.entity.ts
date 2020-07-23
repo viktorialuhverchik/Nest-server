@@ -1,6 +1,9 @@
-import { Entity, Column, PrimaryGeneratedColumn, BeforeInsert, BeforeUpdate, OneToMany } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, BeforeInsert, BeforeUpdate, OneToMany, ManyToMany, OneToOne } from 'typeorm';
 import * as bcrypt from 'bcrypt';
-import {Story} from "../../story/entity/story.entity";
+import { Story } from "../../story/entity/story.entity";
+import { Like } from "../../story/entity/like.entity";
+import { Rating } from "../../story/entity/rating.entity";
+import { Comment } from "../../story/entity/comment.entity";
 
 @Entity()
 export class User {
@@ -27,6 +30,16 @@ export class User {
 
     @OneToMany(type => Story, story => story.user)
     stories: Story[];
+
+    @OneToMany(type => Like, like => like.user)
+    likes: Like[];
+
+    @OneToMany(type => Rating, rating => rating.user)
+    ratings: Rating[];
+
+    @OneToMany(type => Comment, comment => comment.user)
+    comments: Comment[];
+
 
     comparePassword(attempt: string): Promise<boolean> {
         return bcrypt.compare(attempt, this.password);
