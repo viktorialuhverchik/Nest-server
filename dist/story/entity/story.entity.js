@@ -70,7 +70,7 @@ __decorate([
     __metadata("design:type", Array)
 ], Story.prototype, "rating", void 0);
 __decorate([
-    typeorm_1.ManyToOne(type => comment_entity_1.Comment, comments => comments.story),
+    typeorm_1.OneToMany(type => comment_entity_1.Comment, comments => comments.story),
     typeorm_1.JoinTable(),
     __metadata("design:type", Array)
 ], Story.prototype, "comments", void 0);
@@ -90,4 +90,4 @@ Story = __decorate([
     typeorm_1.Entity()
 ], Story);
 exports.Story = Story;
-//# sourceMappingURL=story.entity.js.map
+//# sourceMap

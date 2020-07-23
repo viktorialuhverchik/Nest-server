@@ -12,6 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Rating = void 0;
 const typeorm_1 = require("typeorm");
 const story_entity_1 = require("./story.entity");
+const user_entity_1 = require("../../user/entity/user.entity");
 let Rating = class Rating {
 };
 __decorate([
@@ -22,6 +23,10 @@ __decorate([
     typeorm_1.ManyToOne(type => story_entity_1.Story, story => story.rating),
     __metadata("design:type", story_entity_1.Story)
 ], Rating.prototype, "story", void 0);
+__decorate([
+    typeorm_1.ManyToOne(type => user_entity_1.User, user => user.ratings),
+    __metadata("design:type", user_entity_1.User)
+], Rating.prototype, "user", void 0);
 Rating = __decorate([
     typeorm_1.Entity()
 ], Rating);

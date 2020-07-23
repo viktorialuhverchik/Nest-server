@@ -19,7 +19,7 @@ const genre_controller_1 = require("./genre/genre.controller");
 const tag_controller_1 = require("./tag/tag.controller");
 const genre_service_1 = require("./genre/genre.service");
 const tag_service_1 = require("./tag/tag.service");
-const likes_entity_1 = require("./entity/likes.entity");
+const like_entity_1 = require("./entity/like.entity");
 const rating_entity_1 = require("./entity/rating.entity");
 const comment_entity_1 = require("./entity/comment.entity");
 let StoryModule = class StoryModule {
@@ -28,7 +28,7 @@ StoryModule = __decorate([
     common_1.Module({
         imports: [
             typeorm_1.TypeOrmModule.forFeature([
-                story_entity_1.Story, genre_entity_1.Genre, chapter_entity_1.Chapter, tag_entity_1.Tag, likes_entity_1.Likes, rating_entity_1.Rating, comment_entity_1.Comment
+                story_entity_1.Story, genre_entity_1.Genre, chapter_entity_1.Chapter, tag_entity_1.Tag, like_entity_1.Like, rating_entity_1.Rating, comment_entity_1.Comment
             ])
         ],
         controllers: [story_controller_1.StoryController, genre_controller_1.GenreController, tag_controller_1.TagController],

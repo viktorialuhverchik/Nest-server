@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Chapter = void 0;
 const typeorm_1 = require("typeorm");
 const story_entity_1 = require("./story.entity");
-const likes_entity_1 = require("./likes.entity");
+const like_entity_1 = require("./like.entity");
 let Chapter = class Chapter {
 };
 __decorate([
@@ -36,7 +36,7 @@ __decorate([
     __metadata("design:type", story_entity_1.Story)
 ], Chapter.prototype, "story", void 0);
 __decorate([
-    typeorm_1.OneToMany(type => likes_entity_1.Likes, likes => likes.chapter),
+    typeorm_1.OneToMany(type => like_entity_1.Like, like => like.chapter),
     __metadata("design:type", Array)
 ], Chapter.prototype, "likes", void 0);
 Chapter = __decorate([

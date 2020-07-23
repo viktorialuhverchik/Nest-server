@@ -13,6 +13,9 @@ exports.User = void 0;
 const typeorm_1 = require("typeorm");
 const bcrypt = require("bcrypt");
 const story_entity_1 = require("../../story/entity/story.entity");
+const like_entity_1 = require("../../story/entity/like.entity");
+const rating_entity_1 = require("../../story/entity/rating.entity");
+const comment_entity_1 = require("../../story/entity/comment.entity");
 let User = class User {
     comparePassword(attempt) {
         return bcrypt.compare(attempt, this.password);
@@ -57,6 +60,18 @@ __decorate([
     typeorm_1.OneToMany(type => story_entity_1.Story, story => story.user),
     __metadata("design:type", Array)
 ], User.prototype, "stories", void 0);
+__decorate([
+    typeorm_1.OneToMany(type => like_entity_1.Like, like => like.user),
+    __metadata("design:type", Array)
+], User.prototype, "likes", void 0);
+__decorate([
+    typeorm_1.OneToMany(type => rating_entity_1.Rating, rating => rating.user),
+    __metadata("design:type", Array)
+], User.prototype, "ratings", void 0);
+__decorate([
+    typeorm_1.OneToMany(type => comment_entity_1.Comment, comment => comment.user),
+    __metadata("design:type", Array)
+], User.prototype, "comments", void 0);
 __decorate([
     typeorm_1.BeforeInsert(),
     __metadata("design:type", Function),

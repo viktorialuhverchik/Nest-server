@@ -1,6 +1,6 @@
 import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, OneToMany, JoinTable } from 'typeorm';
 import { Story } from "./story.entity";
-import { Likes } from "./likes.entity";
+import { Like } from "./like.entity";
 
 @Entity()
 export class Chapter {
@@ -19,6 +19,6 @@ export class Chapter {
     @ManyToOne(type => Story, story => story.chapters)
     story: Story;
 
-    @OneToMany(type => Likes, likes => likes.chapter)
-    likes: Likes[];
+    @OneToMany(type => Like, like => like.chapter)
+    likes: Like[];
 }
