@@ -2446,9 +2446,14 @@
         "signature": "f11466a0568ecc42ff01411f403e45af483443b92f2db03f9030b0139e78f7fc",
         "affectsGlobalScope": false
       },
+      "../src/story/entity/likes.entity.ts": {
+        "version": "be1f09b786cf7ced46c1135a096da4805a4fea3566f67f61387c7db9b73db20b",
+        "signature": "665a48cbfa09222bddf5e27858d7c87365fe3677448bac411a04e5138bef7c1b",
+        "affectsGlobalScope": false
+      },
       "../src/story/entity/chapter.entity.ts": {
-        "version": "e77360d2408f29b018ded8f27320e4a7261c5db6aca9874f214daecbb0a4b0a4",
-        "signature": "3b109af593a62e32dd0ad8929e7440fb2fbeb1a994a042c5329676102da35787",
+        "version": "28437e42142120ab166b790cd0d77de55cc1543ec82302be68abc9a5a2a8c4e5",
+        "signature": "01b150d1972cbc8422c0e8cc563fd11a9911a6a1319896a7d03fbf89c96131c3",
         "affectsGlobalScope": false
       },
       "../src/story/entity/tag.entity.ts": {
@@ -2456,9 +2461,19 @@
         "signature": "4c876e7ce44e9f6e4a7729d4c9ae4ef34ca9b26f5af5d7c48ceda4a2ae6e89e6",
         "affectsGlobalScope": false
       },
+      "../src/story/entity/rating.entity.ts": {
+        "version": "eb644493721b5ace9117fe00ccae09d2eefe85230d848ab65e807bd6dc36db8b",
+        "signature": "96aceabdc3a3db19bb2e38fb04c68874c532e1c34a52c1a8453b2cfbced14942",
+        "affectsGlobalScope": false
+      },
+      "../src/story/entity/comment.entity.ts": {
+        "version": "2604741da73f15d9c7277dcf268b9fbb913a730d060869892c2791272479cca6",
+        "signature": "102245492a7b53d808b738170f350e2c4cb4427759ebcc110860ce085590c744",
+        "affectsGlobalScope": false
+      },
       "../src/story/entity/story.entity.ts": {
-        "version": "49d083251e5f1f1fdb6bd9f7c0039d2e81c92e822404d5fd4f8a3a68d20e91c6",
-        "signature": "6700af4c6fab8b50bc2eb8ac92d84ec1f49004c68b0830a1df8c5508ce3047a0",
+        "version": "78ee2ae2afdd6ec529787fd8a32965dd4ab0cfd7d020eb8e2499c3edf4f9bfcf",
+        "signature": "31f60514407e1f0bca30ec70dd93724a3ace28f7f908beb1cc5f6a3fd0e7e145",
         "affectsGlobalScope": false
       },
       "../src/user/entity/user.entity.ts": {
@@ -3092,7 +3107,7 @@
         "affectsGlobalScope": false
       },
       "../src/story/story.service.ts": {
-        "version": "07bcc3c61bdb177a1de666c013779dd088fe2525e39058629d8c6dd12d47f98e",
+        "version": "44380b2aa78ac32b5242731729b7f48183652f6f96312ef9dfbd8693b1d9d6de",
         "signature": "3478125c9f3a15c2f1ab6bdb1b4afe1e65a778fd086cc6a4bfa45380b05116e3",
         "affectsGlobalScope": false
       },
@@ -3482,7 +3497,7 @@
         "affectsGlobalScope": false
       },
       "../src/story/story.module.ts": {
-        "version": "0a01fea9023bb66c67b825b659220ea6c92161413675ede1722c65936d5895ff",
+        "version": "0a88379969f96b133f1e9be517d4fccac0e471aa3a075db14d29321f552d618d",
         "signature": "e93ebdd4271a193e0fa726b2a070b1990922645e5b5d87c59940cc4618a7d90b",
         "affectsGlobalScope": false
       },
@@ -3578,11 +3593,11 @@
       },
       "../src/entities.ts": {
         "version": "e4e4c0540a4e5994433eaa2146af1383ad89c41d77f691e0bd0290a75f6be17b",
-        "signature": "2f6fbc2993846b81677b293f5d3ec8fa18b6380d1d69c28b630e7948d56725be",
+        "signature": "49462f277a76460088177f9b7fdb5ed6998f9dff3a0aa73cac9999e8ca4d63dd",
         "affectsGlobalScope": false
       },
       "../src/app.module.ts": {
-        "version": "4a6faabb9b0e1d5024a9b04e10356e629404a1238faf1fb6a7a05fe79504af05",
+        "version": "c14cfbfcda1618056a1972da9292d691dfcd353284714450c4d90970eda3a530",
         "signature": "9fc7f7b6ad854404973b8cba8e6d883f758237991968e9a3965d716d46f1da88",
         "affectsGlobalScope": false
       },
@@ -3767,7 +3782,7 @@
         "affectsGlobalScope": false
       },
       "../src/main.ts": {
-        "version": "3d6f627c8b941a0a21d07fe4ff1415dd3de02bbe4f9fbcaa8741c4bd837093fe",
+        "version": "64c83ec6dfd0e3073fbca577704c02e3955926c8b25922495763baf42eb3f73a",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6",
         "affectsGlobalScope": false
       },
@@ -11262,9 +11277,37 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/typeorm/index.d.ts",
+        "../src/story/entity/likes.entity.ts",
+        "../src/story/entity/story.entity.ts"
+      ],
+      "../src/story/entity/comment.entity.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/typeorm/index.d.ts",
         "../src/story/entity/story.entity.ts"
       ],
       "../src/story/entity/genre.entity.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/typeorm/index.d.ts",
+        "../src/story/entity/story.entity.ts"
+      ],
+      "../src/story/entity/likes.entity.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/typeorm/index.d.ts",
+        "../src/story/entity/chapter.entity.ts"
+      ],
+      "../src/story/entity/rating.entity.ts": [
         "../node_modules/@types/graceful-fs/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -11281,7 +11324,9 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/typeorm/index.d.ts",
         "../src/story/entity/chapter.entity.ts",
+        "../src/story/entity/comment.entity.ts",
         "../src/story/entity/genre.entity.ts",
+        "../src/story/entity/rating.entity.ts",
         "../src/story/entity/tag.entity.ts",
         "../src/user/entity/user.entity.ts"
       ],
@@ -11350,7 +11395,10 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../src/story/entity/chapter.entity.ts",
+        "../src/story/entity/comment.entity.ts",
         "../src/story/entity/genre.entity.ts",
+        "../src/story/entity/likes.entity.ts",
+        "../src/story/entity/rating.entity.ts",
         "../src/story/entity/story.entity.ts",
         "../src/story/entity/tag.entity.ts",
         "../src/story/genre/genre.controller.ts",
@@ -18610,14 +18658,26 @@
         "../src/story/entity/genre.entity.ts"
       ],
       "../src/story/entity/chapter.entity.ts": [
+        "../src/story/entity/likes.entity.ts",
+        "../src/story/entity/story.entity.ts"
+      ],
+      "../src/story/entity/comment.entity.ts": [
         "../src/story/entity/story.entity.ts"
       ],
       "../src/story/entity/genre.entity.ts": [
         "../src/story/entity/story.entity.ts"
       ],
+      "../src/story/entity/likes.entity.ts": [
+        "../src/story/entity/chapter.entity.ts"
+      ],
+      "../src/story/entity/rating.entity.ts": [
+        "../src/story/entity/story.entity.ts"
+      ],
       "../src/story/entity/story.entity.ts": [
         "../src/story/entity/chapter.entity.ts",
+        "../src/story/entity/comment.entity.ts",
         "../src/story/entity/genre.entity.ts",
+        "../src/story/entity/rating.entity.ts",
         "../src/story/entity/tag.entity.ts",
         "../src/user/entity/user.entity.ts"
       ],

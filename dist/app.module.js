@@ -23,11 +23,11 @@ AppModule = __decorate([
             auth_module_1.AuthModule,
             typeorm_1.TypeOrmModule.forRoot({
                 type: 'mysql',
-                host: 'localhost',
+                host: 'us-cdbr-east-02.cleardb.com',
                 port: 3306,
-                username: 'root',
-                password: 'viktor137',
-                database: 'nest_db',
+                username: 'bc8a7efb6ae9d9',
+                password: 'd52303c2',
+                database: 'heroku_952abb7fdee4c5d',
                 entities: entities_1.Entities,
                 synchronize: true,
                 autoLoadEntities: true

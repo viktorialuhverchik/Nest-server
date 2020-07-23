@@ -9,38 +9,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Chapter = void 0;
+exports.Comment = void 0;
 const typeorm_1 = require("typeorm");
 const story_entity_1 = require("./story.entity");
-const likes_entity_1 = require("./likes.entity");
-let Chapter = class Chapter {
+let Comment = class Comment {
 };
 __decorate([
     typeorm_1.PrimaryGeneratedColumn(),
     __metadata("design:type", Number)
-], Chapter.prototype, "id", void 0);
+], Comment.prototype, "id", void 0);
 __decorate([
-    typeorm_1.Column({ length: 200 }),
+    typeorm_1.Column({ length: 500 }),
     __metadata("design:type", String)
-], Chapter.prototype, "heading", void 0);
+], Comment.prototype, "text", void 0);
 __decorate([
-    typeorm_1.Column({ length: 10000 }),
-    __metadata("design:type", String)
-], Chapter.prototype, "text", void 0);
-__decorate([
-    typeorm_1.Column(),
-    __metadata("design:type", String)
-], Chapter.prototype, "image", void 0);
-__decorate([
-    typeorm_1.ManyToOne(type => story_entity_1.Story, story => story.chapters),
+    typeorm_1.ManyToOne(type => story_entity_1.Story, story => story.comments),
     __metadata("design:type", story_entity_1.Story)
-], Chapter.prototype, "story", void 0);
-__decorate([
-    typeorm_1.OneToMany(type => likes_entity_1.Likes, likes => likes.chapter),
-    __metadata("design:type", Array)
-], Chapter.prototype, "likes", void 0);
-Chapter = __decorate([
+], Comment.prototype, "story", void 0);
+Comment = __decorate([
     typeorm_1.Entity()
-], Chapter);
-exports.Chapter = Chapter;
-//# sourceMappingURL=chapter.entity.js.map
+], Comment);
+exports.Comment = Comment;
+//# sourceMappingURL=comment.entity.js.map

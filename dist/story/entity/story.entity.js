@@ -15,6 +15,8 @@ const genre_entity_1 = require("./genre.entity");
 const chapter_entity_1 = require("./chapter.entity");
 const tag_entity_1 = require("./tag.entity");
 const user_entity_1 = require("../../user/entity/user.entity");
+const rating_entity_1 = require("./rating.entity");
+const comment_entity_1 = require("./comment.entity");
 let Story = class Story {
     setCreatedAt() {
         this.createdAt = new Date();
@@ -62,6 +64,16 @@ __decorate([
     typeorm_1.ManyToOne(type => user_entity_1.User, user => user.stories),
     __metadata("design:type", user_entity_1.User)
 ], Story.prototype, "user", void 0);
+__decorate([
+    typeorm_1.ManyToOne(type => rating_entity_1.Rating, rating => rating.story),
+    typeorm_1.JoinTable(),
+    __metadata("design:type", Array)
+], Story.prototype, "rating", void 0);
+__decorate([
+    typeorm_1.ManyToOne(type => comment_entity_1.Comment, comments => comments.story),
+    typeorm_1.JoinTable(),
+    __metadata("design:type", Array)
+], Story.prototype, "comments", void 0);
 __decorate([
     typeorm_1.BeforeInsert(),
     __metadata("design:type", Function),

@@ -1,5 +1,6 @@
-import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, JoinTable } from 'typeorm';
-import {Story} from "./story.entity";
+import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, OneToMany, JoinTable } from 'typeorm';
+import { Story } from "./story.entity";
+import { Likes } from "./likes.entity";
 
 @Entity()
 export class Chapter {
@@ -9,7 +10,7 @@ export class Chapter {
     @Column({ length: 200 })
     heading: string;
 
-    @Column({ length: 5000 })
+    @Column({ length: 10000 })
     text: string;
 
     @Column()
@@ -17,4 +18,7 @@ export class Chapter {
 
     @ManyToOne(type => Story, story => story.chapters)
     story: Story;
+
+    @OneToMany(type => Likes, likes => likes.chapter)
+    likes: Likes[];
 }

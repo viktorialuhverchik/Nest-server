@@ -6,12 +6,16 @@ import {
     JoinTable,
     OneToMany,
     ManyToOne,
-    BeforeInsert, BeforeUpdate
+    BeforeInsert, 
+    BeforeUpdate
 } from 'typeorm';
 import { Genre } from "./genre.entity";
 import { Chapter } from "./chapter.entity";
 import { Tag } from "./tag.entity";
 import { User } from "../../user/entity/user.entity";
+import { Rating } from "./rating.entity";
+import { Comment } from "./comment.entity";
+
 
 @Entity()
 export class Story {
@@ -43,6 +47,14 @@ export class Story {
 
     @ManyToOne(type => User, user => user.stories)
     user: User;
+
+    @ManyToOne(type => Rating, rating => rating.story)
+    @JoinTable()
+    rating: Rating[];
+
+    @ManyToOne(type => Comment, comments => comments.story)
+    @JoinTable()
+    comments: Comment[];
 
     @BeforeInsert()
     setCreatedAt() {

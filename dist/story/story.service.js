@@ -23,12 +23,12 @@ let StoryService = class StoryService {
     }
     findAll() {
         return this.storyRepository.find({
-            relations: ['genre', 'tags', 'chapters', 'user']
+            relations: ['genre', 'tags', 'chapters', 'user', 'rating', 'comments']
         });
     }
     findOne(id) {
         return this.storyRepository.findOne({
-            relations: ['genre', 'tags', 'chapters', 'user'],
+            relations: ['genre', 'tags', 'chapters', 'user', 'rating', 'comments'],
             where: {
                 id: id
             }
@@ -36,7 +36,7 @@ let StoryService = class StoryService {
     }
     getStoriesByUserId(id) {
         return this.storyRepository.find({
-            relations: ['genre', 'tags', 'chapters', 'user'],
+            relations: ['genre', 'tags', 'chapters', 'user', 'rating', 'comments'],
             where: {
                 user: {
                     id: id
