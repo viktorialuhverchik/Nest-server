@@ -14,11 +14,11 @@ import { Entities } from "./entities";
       AuthModule,
       TypeOrmModule.forRoot({
         type: 'mysql',
-        host: 'localhost',
+        host: 'us-cdbr-east-02.cleardb.com',
         port: 3306,
-        username: 'root',
-        password: 'viktor137',
-        database: 'nest_db',
+        username: 'bc8a7efb6ae9d9',
+        password: 'd52303c2',
+        database: 'heroku_952abb7fdee4c5d',
         entities: Entities,
         synchronize: true,
         autoLoadEntities: true
