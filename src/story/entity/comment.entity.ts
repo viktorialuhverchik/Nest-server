@@ -1,4 +1,4 @@
-import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, ManyToMany, JoinTable } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, ManyToMany, JoinTable, BeforeInsert } from 'typeorm';
 import { Story } from "./story.entity";
 import { User } from "../../user/entity/user.entity";
 
@@ -10,9 +10,17 @@ export class Comment {
     @Column({ length: 500 })
     text: string;
 
+    @Column()
+    createdAt: Date;
+
     @ManyToOne(type => Story, story => story.comments)
     story: Story;
 
     @ManyToOne(type => User, user => user.comments)
     user: User;
+
+    @BeforeInsert()
+    setCreatedAt() {
+        this.createdAt = new Date();
+    }
 }

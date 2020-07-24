@@ -19,6 +19,7 @@ const genre_controller_1 = require("./genre/genre.controller");
 const tag_controller_1 = require("./tag/tag.controller");
 const genre_service_1 = require("./genre/genre.service");
 const tag_service_1 = require("./tag/tag.service");
+const comment_service_1 = require("./comment/comment.service");
 const like_entity_1 = require("./entity/like.entity");
 const rating_entity_1 = require("./entity/rating.entity");
 const comment_entity_1 = require("./entity/comment.entity");
@@ -32,7 +33,7 @@ StoryModule = __decorate([
             ])
         ],
         controllers: [story_controller_1.StoryController, genre_controller_1.GenreController, tag_controller_1.TagController],
-        providers: [story_service_1.StoryService, genre_service_1.GenreService, tag_service_1.TagService],
+        providers: [story_service_1.StoryService, genre_service_1.GenreService, tag_service_1.TagService, comment_service_1.CommentService],
         exports: [story_service_1.StoryService]
     })
 ], StoryModule);

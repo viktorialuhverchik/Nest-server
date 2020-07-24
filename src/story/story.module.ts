@@ -10,6 +10,7 @@ import { GenreController } from "./genre/genre.controller";
 import { TagController } from './tag/tag.controller';
 import { GenreService } from './genre/genre.service';
 import { TagService } from './tag/tag.service';
+import { CommentService } from './comment/comment.service';
 import { Like } from './entity/like.entity';
 import { Rating } from './entity/rating.entity';
 import { Comment } from './entity/comment.entity';
@@ -21,7 +22,7 @@ import { Comment } from './entity/comment.entity';
         ])
     ],
     controllers: [StoryController, GenreController, TagController],
-    providers: [StoryService, GenreService, TagService],
+    providers: [StoryService, GenreService, TagService, CommentService],
     exports: [StoryService]
 })
 export class StoryModule {}

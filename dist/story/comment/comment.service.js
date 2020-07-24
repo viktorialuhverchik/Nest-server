@@ -12,46 +12,23 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.StoryService = void 0;
+exports.CommentService = void 0;
 const common_1 = require("@nestjs/common");
 const typeorm_1 = require("@nestjs/typeorm");
 const typeorm_2 = require("typeorm");
-const story_entity_1 = require("./entity/story.entity");
-let StoryService = class StoryService {
-    constructor(storyRepository) {
-        this.storyRepository = storyRepository;
+const comment_entity_1 = require("../entity/comment.entity");
+let CommentService = class CommentService {
+    constructor(commentRepository) {
+        this.commentRepository = commentRepository;
     }
-    findAll() {
-        return this.storyRepository.find({
-            relations: ['genre', 'tags', 'chapters', 'user', 'rating']
-        });
-    }
-    findOne(id) {
-        return this.storyRepository.findOne({
-            relations: ['genre', 'tags', 'chapters', 'user', 'rating', 'comments', 'comments.user'],
-            where: {
-                id: id
-            }
-        });
-    }
-    getStoriesByUserId(id) {
-        return this.storyRepository.find({
-            relations: ['genre', 'tags', 'chapters', 'user', 'rating'],
-            where: {
-                user: {
-                    id: id
-                }
-            }
-        });
-    }
-    async create(story) {
-        return this.storyRepository.save(story);
+    async addComment(comment) {
+        return this.commentRepository.save(comment);
     }
 };
-StoryService = __decorate([
+CommentService = __decorate([
     common_1.Injectable(),
-    __param(0, typeorm_1.InjectRepository(story_entity_1.Story)),
+    __param(0, typeorm_1.InjectRepository(comment_entity_1.Comment)),
     __metadata("design:paramtypes", [typeorm_2.Repository])
-], StoryService);
-exports.StoryService = StoryService;
-//# sourceMappingURL=story.service.js.map
+], CommentService);
+exports.CommentService = CommentService;
+//# sourceMappingURL=comment.service.js.map

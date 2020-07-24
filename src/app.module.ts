@@ -23,6 +23,17 @@ import { Entities } from "./entities";
         synchronize: true,
         autoLoadEntities: true
       })
+      // TypeOrmModule.forRoot({
+      //   type: 'mysql',
+      //   host: 'localhost',
+      //   port: 3306,
+      //   username: 'root',
+      //   password: 'viktor137',
+      //   database: 'nest_db',
+      //   entities: Entities,
+      //   synchronize: true,
+      //   autoLoadEntities: true
+      // })
   ]
 })
 export class AppModule {}

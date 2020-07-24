@@ -90,4 +90,4 @@ Story = __decorate([
     typeorm_1.Entity()
 ], Story);
 exports.Story = Story;
-//# sourceMap
+//# sourceMappingURL=story.entity.js.map

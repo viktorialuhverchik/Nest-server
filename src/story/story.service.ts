@@ -13,7 +13,7 @@ export class StoryService {
     findAll(): Promise<Story[]> {
         return this.storyRepository.find(
             {
-                relations: ['genre', 'tags', 'chapters', 'user', 'rating', 'comments']
+                relations: ['genre', 'tags', 'chapters', 'user', 'rating']
             }
         );
     }
@@ -21,7 +21,7 @@ export class StoryService {
     findOne(id: number): Promise<Story> {
         return this.storyRepository.findOne(
             {
-                relations: ['genre', 'tags', 'chapters', 'user', 'rating', 'comments'],
+                relations: ['genre', 'tags', 'chapters', 'user', 'rating', 'comments', 'comments.user'],
                 where: {
                     id: id
                 }
@@ -32,7 +32,7 @@ export class StoryService {
     getStoriesByUserId(id: number): Promise<Story[]> {
         return this.storyRepository.find(
             {
-            relations: ['genre', 'tags', 'chapters', 'user', 'rating', 'comments'],
+            relations: ['genre', 'tags', 'chapters', 'user', 'rating'],
                 where: {
                     user: {
                         id: id

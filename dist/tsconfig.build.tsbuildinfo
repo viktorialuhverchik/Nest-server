@@ -2467,12 +2467,12 @@
         "affectsGlobalScope": false
       },
       "../src/story/entity/comment.entity.ts": {
-        "version": "3994b32dae81be1b7ef5de42dbe1c63c9229b97076cc7847e458638357749925",
-        "signature": "17814c77a589f3881214c0e12031ade96a163312f5381afbbeb51d46c9111fa1",
+        "version": "e7d013e3e2cf6907d1bde08a8524648f13e37879815ccb27b1a19ad91865823a",
+        "signature": "a2ae30ea88d4c26eb0d086da3ce1f71028043bad3a9b48546c24552f0a195c6a",
         "affectsGlobalScope": false
       },
       "../src/story/entity/story.entity.ts": {
-        "version": "8461fa7fee9a4ea8e9a9fea07d7b4f21c10bf971522ac8d0b03a954da12217ed",
+        "version": "fbb67bf5138d5722593c254972d9df8f714f10b7791a668d93196ae6f85e1f7a",
         "signature": "31f60514407e1f0bca30ec70dd93724a3ace28f7f908beb1cc5f6a3fd0e7e145",
         "affectsGlobalScope": false
       },
@@ -3107,7 +3107,7 @@
         "affectsGlobalScope": false
       },
       "../src/story/story.service.ts": {
-        "version": "44380b2aa78ac32b5242731729b7f48183652f6f96312ef9dfbd8693b1d9d6de",
+        "version": "61c6191f49c5987c984a24868386eb305e8a21efd526e5b9aa9c52220b2fcad0",
         "signature": "3478125c9f3a15c2f1ab6bdb1b4afe1e65a778fd086cc6a4bfa45380b05116e3",
         "affectsGlobalScope": false
       },
@@ -3466,9 +3466,19 @@
         "signature": "50f87d6ae60f123dba463494619b0b353e381050d4004a96129e439e29e42cac",
         "affectsGlobalScope": false
       },
+      "../src/story/comment/comment.service.ts": {
+        "version": "1789b9b9e3661fdf7810252d80f9e0877e7f5b814bec1815f42fd908ffae3fb9",
+        "signature": "32d56abdf7b711126c8dd375f194f38c97e35b378b1591995ce5bc6b670eafc8",
+        "affectsGlobalScope": false
+      },
       "../src/story/dto/create-story.dto.ts": {
         "version": "b96ec7fa5fa53d65ffde695325ce426c0d04409e46b60d8636b600e4888bc531",
         "signature": "c36374c78bc1b80efcadd583352a6349c75aa3ed259fbf8b19949e166d776de2",
+        "affectsGlobalScope": false
+      },
+      "../src/story/dto/create-comment.dto.ts": {
+        "version": "bc699679326005693a12ac13363518364aa5c31f3f6f6a27c3aecdb16e7699fb",
+        "signature": "0e271aab3508c089b8432efa5403fb85871e5f70e065756b3555840f0e45aadc",
         "affectsGlobalScope": false
       },
       "../src/story/tag/tag.service.ts": {
@@ -3477,8 +3487,8 @@
         "affectsGlobalScope": false
       },
       "../src/story/story.controller.ts": {
-        "version": "9292cb772aba667a5673bf3f605d351aa6680b9a47c1f99243672115e96294cf",
-        "signature": "81a518eb219b6866f75f2db782d3357238eaa8359f4f2910a5a6544b36d1b1c2",
+        "version": "31efe13cafbf4a4b84514d040246dcd9fc3f5d5c7d8f3debd91d3556f58524d0",
+        "signature": "0c7de2e8fdef2849d6ed97788254ba280f47b2a67cade0ab90d77335b846a9cf",
         "affectsGlobalScope": false
       },
       "../src/story/genre/genre.service.ts": {
@@ -3497,7 +3507,7 @@
         "affectsGlobalScope": false
       },
       "../src/story/story.module.ts": {
-        "version": "6d67ec6a013eeec8736bef7f02f1ddbf8fd019c3f270f02938c59864a5532d14",
+        "version": "567402daa8118c4ca73edc69d552651d34a4cc0b2aa2ae265a891b54cc2071c6",
         "signature": "e93ebdd4271a193e0fa726b2a070b1990922645e5b5d87c59940cc4618a7d90b",
         "affectsGlobalScope": false
       },
@@ -3593,11 +3603,11 @@
       },
       "../src/entities.ts": {
         "version": "e4e4c0540a4e5994433eaa2146af1383ad89c41d77f691e0bd0290a75f6be17b",
-        "signature": "49462f277a76460088177f9b7fdb5ed6998f9dff3a0aa73cac9999e8ca4d63dd",
+        "signature": "2f6fbc2993846b81677b293f5d3ec8fa18b6380d1d69c28b630e7948d56725be",
         "affectsGlobalScope": false
       },
       "../src/app.module.ts": {
-        "version": "c14cfbfcda1618056a1972da9292d691dfcd353284714450c4d90970eda3a530",
+        "version": "f4952657dbc204537468630963831aaccac98302db36da66d10a74694377ff6f",
         "signature": "9fc7f7b6ad854404973b8cba8e6d883f758237991968e9a3965d716d46f1da88",
         "affectsGlobalScope": false
       },
@@ -11260,6 +11270,25 @@
         "../node_modules/@types/node/util.d.ts",
         "../src/app.module.ts"
       ],
+      "../src/story/comment/comment.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/typeorm/index.d.ts",
+        "../src/story/entity/comment.entity.ts"
+      ],
+      "../src/story/dto/create-comment.dto.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/class-validator/types/index.d.ts"
+      ],
       "../src/story/dto/create-story.dto.ts": [
         "../node_modules/@types/graceful-fs/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
@@ -11383,7 +11412,10 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../src/auth/guard/jwt-auth.guard.ts",
+        "../src/story/comment/comment.service.ts",
+        "../src/story/dto/create-comment.dto.ts",
         "../src/story/dto/create-story.dto.ts",
+        "../src/story/entity/comment.entity.ts",
         "../src/story/entity/story.entity.ts",
         "../src/story/entity/tag.entity.ts",
         "../src/story/story.service.ts",
@@ -11397,6 +11429,7 @@
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts",
+        "../src/story/comment/comment.service.ts",
         "../src/story/entity/chapter.entity.ts",
         "../src/story/entity/comment.entity.ts",
         "../src/story/entity/genre.entity.ts",
@@ -18659,6 +18692,10 @@
         "../src/story/entity/story.entity.ts",
         "../src/story/entity/tag.entity.ts"
       ],
+      "../src/story/comment/comment.service.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/story/entity/comment.entity.ts"
+      ],
       "../src/story/dto/create-story.dto.ts": [
         "../src/story/entity/chapter.entity.ts",
         "../src/story/entity/genre.entity.ts"
@@ -18699,7 +18736,10 @@
         "../src/story/entity/genre.entity.ts"
       ],
       "../src/story/story.controller.ts": [
+        "../src/story/comment/comment.service.ts",
+        "../src/story/dto/create-comment.dto.ts",
         "../src/story/dto/create-story.dto.ts",
+        "../src/story/entity/comment.entity.ts",
         "../src/story/entity/story.entity.ts",
         "../src/story/story.service.ts",
         "../src/story/tag/tag.service.ts"
