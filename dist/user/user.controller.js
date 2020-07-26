@@ -16,11 +16,13 @@ exports.UserController = void 0;
 const common_1 = require("@nestjs/common");
 const user_service_1 = require("./user.service");
 const story_service_1 = require("../story/story.service");
+const rating_service_1 = require("../story/rating/rating.service");
 const jwt_auth_guard_1 = require("../auth/guard/jwt-auth.guard");
 let UserController = class UserController {
-    constructor(userService, storyService) {
+    constructor(userService, storyService, ratingService) {
         this.userService = userService;
         this.storyService = storyService;
+        this.ratingService = ratingService;
     }
     findAll() {
         return this.userService.findAll();
@@ -28,8 +30,23 @@ let UserController = class UserController {
     findOne(id) {
         return this.userService.findOne(id);
     }
-    getUserStories(id) {
-        return this.storyService.getStoriesByUserId(id);
+    async getUserStories(id) {
+        let stories = await this.storyService.getStoriesByUserId(id);
+        stories = await Promise.all(stories.map(async (story) => {
+            let amount = 0;
+            let ratings = await this.ratingService.findAllByStory(story);
+            if (ratings) {
+                ratings.forEach(rating => {
+                    amount += rating.rating;
+                });
+            }
+            else {
+                ratings = [];
+            }
+            story.ratingAmount = amount / ratings.length;
+            return story;
+        }));
+        return stories;
     }
     async updateUsersStatus(users, command) {
         try {
@@ -71,7 +88,7 @@ __decorate([
     __param(0, common_1.Param('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Number]),
-    __metadata("design:returntype", void 0)
+    __metadata("design:returntype", Promise)
 ], UserController.prototype, "getUserStories", null);
 __decorate([
     common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
@@ -93,7 +110,8 @@ __decorate([
 UserController = __decorate([
     common_1.Controller('users'),
     __metadata("design:paramtypes", [user_service_1.UserService,
-        story_service_1.StoryService])
+        story_service_1.StoryService,
+        rating_service_1.RatingService])
 ], UserController);
 exports.UserController = UserController;
 //# sourceMappingURL=user.controller.js.map

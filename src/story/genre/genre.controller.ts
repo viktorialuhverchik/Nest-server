@@ -1,7 +1,6 @@
-import { BadRequestException, Body, Controller, Delete, Get, Put, UseGuards, Param } from '@nestjs/common';
+import { Controller, Delete, Get, Put, UseGuards, Param } from '@nestjs/common';
 import { JwtAuthGuard } from '../../auth/guard/jwt-auth.guard';
 import { GenreService } from './genre.service';
-import { Genre } from '../entity/genre.entity';
 
 @Controller('genres')
 export class GenreController {

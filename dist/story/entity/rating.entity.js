@@ -20,6 +20,10 @@ __decorate([
     __metadata("design:type", Number)
 ], Rating.prototype, "id", void 0);
 __decorate([
+    typeorm_1.Column(),
+    __metadata("design:type", Number)
+], Rating.prototype, "rating", void 0);
+__decorate([
     typeorm_1.ManyToOne(type => story_entity_1.Story, story => story.rating),
     __metadata("design:type", story_entity_1.Story)
 ], Rating.prototype, "story", void 0);

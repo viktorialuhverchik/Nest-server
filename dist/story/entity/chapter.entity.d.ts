@@ -7,4 +7,6 @@ export declare class Chapter {
     image: string;
     story: Story;
     likes: Like[];
+    likesAmount?: number;
+    liked?: boolean;
 }

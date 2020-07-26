@@ -7,6 +7,9 @@ export class Rating {
     @PrimaryGeneratedColumn()
     id: number;
 
+    @Column()
+    rating: number;
+
     @ManyToOne(type => Story, story => story.rating)
     story: Story;
 

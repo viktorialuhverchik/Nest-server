@@ -18,4 +18,5 @@ export declare class Story {
     comments: Comment[];
     setCreatedAt(): void;
     hashPassword(): void;
+    ratingAmount?: number;
 }

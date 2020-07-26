@@ -21,4 +21,8 @@ export class Chapter {
 
     @OneToMany(type => Like, like => like.chapter)
     likes: Like[];
+
+    likesAmount? : number;
+
+    liked? : boolean;
 }

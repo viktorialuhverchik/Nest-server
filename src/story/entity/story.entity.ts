@@ -66,4 +66,6 @@ export class Story {
     hashPassword() {
         this.updatedAt = new Date();
     }
+
+    ratingAmount? : number;
 }
