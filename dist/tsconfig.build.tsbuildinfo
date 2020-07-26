@@ -2447,12 +2447,12 @@
         "affectsGlobalScope": false
       },
       "../src/story/entity/like.entity.ts": {
-        "version": "e278085d097f6a7878a66fd2ec29eeef6e8763b8dcba94329b077b0a10ce0da1",
+        "version": "9cb4c9a308824ac96a6d5a9df7a0384ab82161e29dfdad34e5d93bd68ff73ec3",
         "signature": "6e947b44d77d21d34c2bbb7a2a623b10f168f639e57a3b3633dd3b00f1b27a58",
         "affectsGlobalScope": false
       },
       "../src/story/entity/chapter.entity.ts": {
-        "version": "96eef839abef78ea0ac9b8effa87ebffa9b6dd8eaf69e6ca00acce265cde73a3",
+        "version": "1a7b2cd53625785c618a4f491b5f73dd0c85629adaa1d7a89fd18d2bba52299a",
         "signature": "b6eb69a0b0a6987a0df73cce22f88b5292e7082bb01036909fb994d433fc54b5",
         "affectsGlobalScope": false
       },
@@ -2462,17 +2462,17 @@
         "affectsGlobalScope": false
       },
       "../src/story/entity/rating.entity.ts": {
-        "version": "768c64f5fb60ee46721870cf13f16748c4458a9a4c858237b3b701838a01ae92",
+        "version": "84010ee7eac91280eafab8f36191022feaaf8cc488b61fd92908f030f14741f3",
         "signature": "46b738c8385d00ea0def55d4e130cc9cfff06262deee76b303f665280a10693c",
         "affectsGlobalScope": false
       },
       "../src/story/entity/comment.entity.ts": {
-        "version": "e7d013e3e2cf6907d1bde08a8524648f13e37879815ccb27b1a19ad91865823a",
+        "version": "0d8f1a87c949a772074a074b23a179b5e312c6488e2681da2bfdf0aa54918b83",
         "signature": "a2ae30ea88d4c26eb0d086da3ce1f71028043bad3a9b48546c24552f0a195c6a",
         "affectsGlobalScope": false
       },
       "../src/story/entity/story.entity.ts": {
-        "version": "5aab5e662d5ab355abb7f2243d1722041c68fae5344b5e3bf5b4e1883d1ff5f8",
+        "version": "2cba9b157e9203c7f6aa1d0f2d141203600e7fc36407b31830fb2dc456971013",
         "signature": "51323da1edc9787aa4372d8d7762d0b1b760e15bb9c85a12bbf60b868a1e06de",
         "affectsGlobalScope": false
       },
@@ -3107,8 +3107,8 @@
         "affectsGlobalScope": false
       },
       "../src/story/story.service.ts": {
-        "version": "61c6191f49c5987c984a24868386eb305e8a21efd526e5b9aa9c52220b2fcad0",
-        "signature": "3478125c9f3a15c2f1ab6bdb1b4afe1e65a778fd086cc6a4bfa45380b05116e3",
+        "version": "cae4582ebad1724d8ad456cae449661a6c6ca8f464a8dbcc11e755329797e30b",
+        "signature": "5a2cef660cf84b88c292d5df23fabab263e936eddc174236205dd384939eb358",
         "affectsGlobalScope": false
       },
       "../src/story/rating/rating.service.ts": {
@@ -3502,8 +3502,8 @@
         "affectsGlobalScope": false
       },
       "../src/story/story.controller.ts": {
-        "version": "5e0c87957a5032dd3e72fb3f967224bded04ff2548fb5dae73136d398a6f96d9",
-        "signature": "ddbe9ec4795534003e475c9b7c6f4cf1f8177b656faf26fbe28c7bab257edf20",
+        "version": "51ce758570b514831340805d97cd3ed300d2763ca91e54a0b2ce6cfd59279b5d",
+        "signature": "6e5e7c11a46b4f224a022484e54c4257e59a6e98f2890aa4b532ad4708e03c84",
         "affectsGlobalScope": false
       },
       "../src/story/genre/genre.service.ts": {
@@ -3522,13 +3522,13 @@
         "affectsGlobalScope": false
       },
       "../src/story/chapter/chapter.service.ts": {
-        "version": "0384f0ad264b779a74737c411002b0f1614fb547fd808b7fe8a5d2ebc8a78ddc",
-        "signature": "22171e9fa4fc7dc27c554312f03f4dd2f0c4326695e7ba01bc4191967b924c2c",
+        "version": "4b00b6c4697c607d010a9b9a12f6d54df5c42b58d1a34f2a1faec12d4e116782",
+        "signature": "4b17eeda578b36f81245771d3ef5b89889def48f716d2ddd7766e16ad74246f8",
         "affectsGlobalScope": false
       },
       "../src/story/chapter/chapter.controller.ts": {
-        "version": "f90fce96e6fdc3b7d16dbd9210bdb97c1d41c138db16eb7a853bee27cc6a8ef1",
-        "signature": "fd8ff3085f0df032500ec9885d63040ed499d1c18dcf9743de8cd61b64f10021",
+        "version": "044442d9c09e3df7854d9b527f3eb98c073811b6da71ee319ed5c913459f1ee9",
+        "signature": "fb975483a5fd21be520fa0174388792e4112bef4b8119502f92fef5f6e9f8381",
         "affectsGlobalScope": false
       },
       "../src/story/chapter/chapter.module.ts": {
@@ -11336,8 +11336,7 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/typeorm/index.d.ts",
-        "../src/story/entity/chapter.entity.ts",
-        "../src/story/entity/story.entity.ts"
+        "../src/story/entity/chapter.entity.ts"
       ],
       "../src/story/comment/comment.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",

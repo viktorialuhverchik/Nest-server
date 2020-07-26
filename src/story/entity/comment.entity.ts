@@ -13,10 +13,10 @@ export class Comment {
     @Column()
     createdAt: Date;
 
-    @ManyToOne(type => Story, story => story.comments)
+    @ManyToOne(type => Story, story => story.comments, { onDelete: "CASCADE" })
     story: Story;
 
-    @ManyToOne(type => User, user => user.comments)
+    @ManyToOne(type => User, user => user.comments, { onDelete: "CASCADE" })
     user: User;
 
     @BeforeInsert()

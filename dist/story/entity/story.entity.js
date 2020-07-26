@@ -47,7 +47,7 @@ __decorate([
     __metadata("design:type", Date)
 ], Story.prototype, "updatedAt", void 0);
 __decorate([
-    typeorm_1.ManyToOne(type => genre_entity_1.Genre, genre => genre.stories),
+    typeorm_1.ManyToOne(type => genre_entity_1.Genre, genre => genre.stories, { onDelete: "SET NULL" }),
     typeorm_1.JoinTable(),
     __metadata("design:type", genre_entity_1.Genre)
 ], Story.prototype, "genre", void 0);
@@ -61,17 +61,15 @@ __decorate([
     __metadata("design:type", Array)
 ], Story.prototype, "tags", void 0);
 __decorate([
-    typeorm_1.ManyToOne(type => user_entity_1.User, user => user.stories),
+    typeorm_1.ManyToOne(type => user_entity_1.User, user => user.stories, { onDelete: "CASCADE" }),
     __metadata("design:type", user_entity_1.User)
 ], Story.prototype, "user", void 0);
 __decorate([
-    typeorm_1.ManyToOne(type => rating_entity_1.Rating, rating => rating.story),
-    typeorm_1.JoinTable(),
+    typeorm_1.OneToMany(type => rating_entity_1.Rating, rating => rating.story),
     __metadata("design:type", Array)
 ], Story.prototype, "rating", void 0);
 __decorate([
     typeorm_1.OneToMany(type => comment_entity_1.Comment, comments => comments.story),
-    typeorm_1.JoinTable(),
     __metadata("design:type", Array)
 ], Story.prototype, "comments", void 0);
 __decorate([

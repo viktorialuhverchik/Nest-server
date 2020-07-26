@@ -103,6 +103,14 @@ let StoryController = class StoryController {
         let rating = Object.assign(oldRating, ratingDto);
         return await this.ratingService.createRating(rating);
     }
+    async deleteStory(storyId) {
+        try {
+            return await this.storyService.deleteStory(storyId);
+        }
+        catch (e) {
+            throw new common_1.BadRequestException(e);
+        }
+    }
 };
 __decorate([
     common_1.Get('all'),
@@ -148,6 +156,14 @@ __decorate([
     __metadata("design:paramtypes", [create_rating_dto_1.CreateRatingDto, Number, Object]),
     __metadata("design:returntype", Promise)
 ], StoryController.prototype, "changeRating", null);
+__decorate([
+    common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
+    common_1.Delete(':id'),
+    __param(0, common_1.Param('id')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Number]),
+    __metadata("design:returntype", Promise)
+], StoryController.prototype, "deleteStory", null);
 StoryController = __decorate([
     common_1.Controller('stories'),
     __metadata("design:paramtypes", [story_service_1.StoryService,

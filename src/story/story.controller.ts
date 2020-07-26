@@ -1,4 +1,4 @@
-import { Request, Body, Controller, Delete, Get, Put, UseGuards, Param, Post, Query } from '@nestjs/common';
+import { Request, Body, Controller, Delete, Get, Put, UseGuards, Param, Post, Query, BadRequestException } from '@nestjs/common';
 import { JwtAuthGuard } from "../auth/guard/jwt-auth.guard";
 import { StoryService } from './story.service';
 import { CommentService } from './comment/comment.service';
@@ -128,5 +128,14 @@ export class StoryController {
         
         return await this.ratingService.createRating(rating);
     }
-}
 
+    @UseGuards(JwtAuthGuard)
+    @Delete(':id')
+    async deleteStory(@Param('id') storyId: number,) {
+        try {
+            return await this.storyService.deleteStory(storyId);
+        } catch (e) {
+            throw new BadRequestException(e);
+        }
+    }
+}

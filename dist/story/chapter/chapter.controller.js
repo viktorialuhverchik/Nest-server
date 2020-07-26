@@ -32,6 +32,14 @@ let ChapterController = class ChapterController {
             return await this.likeService.remove(like);
         }
     }
+    async deleteChapter(chapterId) {
+        try {
+            return await this.chapterService.deleteChapter(chapterId);
+        }
+        catch (e) {
+            throw new common_1.BadRequestException(e);
+        }
+    }
 };
 __decorate([
     common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
@@ -43,6 +51,14 @@ __decorate([
     __metadata("design:paramtypes", [Boolean, Number, Object]),
     __metadata("design:returntype", Promise)
 ], ChapterController.prototype, "toggleLike", null);
+__decorate([
+    common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
+    common_1.Delete(':id'),
+    __param(0, common_1.Param('id')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Number]),
+    __metadata("design:returntype", Promise)
+], ChapterController.prototype, "deleteChapter", null);
 ChapterController = __decorate([
     common_1.Controller('chapters'),
     __metadata("design:paramtypes", [like_service_1.LikeService,

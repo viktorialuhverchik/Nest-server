@@ -34,7 +34,7 @@ export class Story {
     @Column()
     updatedAt: Date;
 
-    @ManyToOne(type => Genre, genre => genre.stories)
+    @ManyToOne(type => Genre, genre => genre.stories, { onDelete: "SET NULL" })
     @JoinTable()
     genre: Genre;
 
@@ -45,15 +45,13 @@ export class Story {
     @JoinTable()
     tags: Tag[];
 
-    @ManyToOne(type => User, user => user.stories)
+    @ManyToOne(type => User, user => user.stories, { onDelete: "CASCADE" })
     user: User;
 
-    @ManyToOne(type => Rating, rating => rating.story)
-    @JoinTable()
+    @OneToMany(type => Rating, rating => rating.story)
     rating: Rating[];
 
-    @OneToMany(type => Comment, comments => comments. story)
-    @JoinTable()
+    @OneToMany(type => Comment, comments => comments.story)
     comments: Comment[];
 
     @BeforeInsert()

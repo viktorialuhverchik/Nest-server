@@ -7,4 +7,5 @@ export declare class StoryService {
     findOne(id: number): Promise<Story>;
     getStoriesByUserId(id: number): Promise<Story[]>;
     create(story: Story): Promise<Story>;
+    deleteStory(storyId: number): Promise<void>;
 }

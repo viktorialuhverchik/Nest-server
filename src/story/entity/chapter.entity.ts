@@ -16,7 +16,7 @@ export class Chapter {
     @Column()
     image: string;
 
-    @ManyToOne(type => Story, story => story.chapters)
+    @ManyToOne(type => Story, story => story.chapters, { onDelete: "CASCADE" })
     story: Story;
 
     @OneToMany(type => Like, like => like.chapter)

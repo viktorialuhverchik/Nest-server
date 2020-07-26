@@ -24,11 +24,11 @@ __decorate([
     __metadata("design:type", Number)
 ], Rating.prototype, "rating", void 0);
 __decorate([
-    typeorm_1.ManyToOne(type => story_entity_1.Story, story => story.rating),
+    typeorm_1.ManyToOne(type => story_entity_1.Story, story => story.rating, { onDelete: "CASCADE" }),
     __metadata("design:type", story_entity_1.Story)
 ], Rating.prototype, "story", void 0);
 __decorate([
-    typeorm_1.ManyToOne(type => user_entity_1.User, user => user.ratings),
+    typeorm_1.ManyToOne(type => user_entity_1.User, user => user.ratings, { onDelete: "CASCADE" }),
     __metadata("design:type", user_entity_1.User)
 ], Rating.prototype, "user", void 0);
 Rating = __decorate([

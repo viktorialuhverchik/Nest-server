@@ -45,4 +45,12 @@ export class StoryService {
     async create(story: Story): Promise<Story> {
         return this.storyRepository.save(story);
     }
+
+    async deleteStory(storyId: number): Promise<void> {
+        await this.storyRepository
+            .createQueryBuilder('story')
+            .delete()
+            .where("id = :storyId", { storyId })
+            .execute();
+    }
 }

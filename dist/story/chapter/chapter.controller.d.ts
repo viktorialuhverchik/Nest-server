@@ -5,4 +5,5 @@ export declare class ChapterController {
     private readonly chapterService;
     constructor(likeService: LikeService, chapterService: ChapterService);
     toggleLike(liked: boolean, chapterId: number, req: any): Promise<any>;
+    deleteChapter(chapterId: number): Promise<void>;
 }

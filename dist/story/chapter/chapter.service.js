@@ -24,6 +24,13 @@ let ChapterService = class ChapterService {
     findOne(id) {
         return this.chapterRepository.findOne(id);
     }
+    async deleteChapter(chapterId) {
+        await this.chapterRepository
+            .createQueryBuilder('chapter')
+            .delete()
+            .where("id = :chapterId", { chapterId })
+            .execute();
+    }
 };
 ChapterService = __decorate([
     common_1.Injectable(),

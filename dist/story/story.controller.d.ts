@@ -21,4 +21,5 @@ export declare class StoryController {
     create(storyDto: CreateStoryDto, req: any): Promise<Story>;
     addComment(commentDto: CreateCommentDto, storyId: number, req: any): Promise<Comment>;
     changeRating(ratingDto: CreateRatingDto, storyId: number, req: any): Promise<Rating>;
+    deleteStory(storyId: number): Promise<void>;
 }

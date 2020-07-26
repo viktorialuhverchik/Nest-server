@@ -47,6 +47,13 @@ let StoryService = class StoryService {
     async create(story) {
         return this.storyRepository.save(story);
     }
+    async deleteStory(storyId) {
+        await this.storyRepository
+            .createQueryBuilder('story')
+            .delete()
+            .where("id = :storyId", { storyId })
+            .execute();
+    }
 };
 StoryService = __decorate([
     common_1.Injectable(),

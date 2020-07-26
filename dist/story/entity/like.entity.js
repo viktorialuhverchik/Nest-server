@@ -20,11 +20,11 @@ __decorate([
     __metadata("design:type", Number)
 ], Like.prototype, "id", void 0);
 __decorate([
-    typeorm_1.ManyToOne(type => chapter_entity_1.Chapter, chapter => chapter.likes),
+    typeorm_1.ManyToOne(type => chapter_entity_1.Chapter, chapter => chapter.likes, { onDelete: "CASCADE" }),
     __metadata("design:type", chapter_entity_1.Chapter)
 ], Like.prototype, "chapter", void 0);
 __decorate([
-    typeorm_1.ManyToOne(type => user_entity_1.User, user => user.likes),
+    typeorm_1.ManyToOne(type => user_entity_1.User, user => user.likes, { onDelete: "CASCADE" }),
     __metadata("design:type", user_entity_1.User)
 ], Like.prototype, "user", void 0);
 Like = __decorate([

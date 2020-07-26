@@ -10,9 +10,9 @@ export class Rating {
     @Column()
     rating: number;
 
-    @ManyToOne(type => Story, story => story.rating)
+    @ManyToOne(type => Story, story => story.rating, { onDelete: "CASCADE" })
     story: Story;
 
-    @ManyToOne(type => User, user => user.ratings)
+    @ManyToOne(type => User, user => user.ratings, { onDelete: "CASCADE" })
     user: User;
 }

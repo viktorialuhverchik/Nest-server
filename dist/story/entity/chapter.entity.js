@@ -32,7 +32,7 @@ __decorate([
     __metadata("design:type", String)
 ], Chapter.prototype, "image", void 0);
 __decorate([
-    typeorm_1.ManyToOne(type => story_entity_1.Story, story => story.chapters),
+    typeorm_1.ManyToOne(type => story_entity_1.Story, story => story.chapters, { onDelete: "CASCADE" }),
     __metadata("design:type", story_entity_1.Story)
 ], Chapter.prototype, "story", void 0);
 __decorate([

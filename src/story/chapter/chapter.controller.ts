@@ -27,4 +27,14 @@ export class ChapterController {
             return await this.likeService.remove(like);
         }
     }
+
+    @UseGuards(JwtAuthGuard)
+    @Delete(':id')
+    async deleteChapter(@Param('id') chapterId: number,) {
+        try {
+            return await this.chapterService.deleteChapter(chapterId);
+        } catch (e) {
+            throw new BadRequestException(e);
+        }
+    }
 }
