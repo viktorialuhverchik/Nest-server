@@ -10,4 +10,5 @@ import { Genre } from "../entity/genre.entity";
     providers: [GenreService],
     exports: [GenreService]
 })
+
 export class GenreModule {}

@@ -32,5 +32,4 @@ export class TagService {
 
         return tag;
     }
-    
 }

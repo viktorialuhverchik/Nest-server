@@ -14,4 +14,5 @@ import { Like } from '../entity/like.entity';
     providers: [ChapterService, LikeService],
     exports: [ChapterService, LikeService]
 })
+
 export class ChapterModule {}

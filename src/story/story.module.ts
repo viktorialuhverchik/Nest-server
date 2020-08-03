@@ -1,24 +1,23 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { ChapterModule } from './chapter/chapter.module';
 import { StoryController } from "./story.controller";
+import { GenreController } from "./genre/genre.controller";
+import { TagController } from './tag/tag.controller';
+import { ChapterController } from './chapter/chapter.controller';
 import { Story } from "./entity/story.entity";
-import { StoryService } from "./story.service";
 import { Genre } from "./entity/genre.entity";
 import { Chapter } from "./entity/chapter.entity";
 import { Tag } from "./entity/tag.entity";
-import { GenreController } from "./genre/genre.controller";
 import { Comment } from './entity/comment.entity';
-import { TagController } from './tag/tag.controller';
+import { Like } from './entity/like.entity';
+import { Rating } from './entity/rating.entity';
+import { StoryService } from "./story.service";
 import { GenreService } from './genre/genre.service';
 import { TagService } from './tag/tag.service';
 import { CommentService } from './comment/comment.service';
 import { ChapterService } from './chapter/chapter.service';
 import { RatingService } from './rating/rating.service';
-import { Like } from './entity/like.entity';
-import { Rating } from './entity/rating.entity';
-import { ChapterController } from './chapter/chapter.controller';
-import { ChapterModule } from './chapter/chapter.module';
-import { LikeService } from './like/like.service';
 
 @Module({
     imports: [
@@ -38,4 +37,5 @@ import { LikeService } from './like/like.service';
     ],
     exports: [StoryService, RatingService]
 })
+
 export class StoryModule {}

@@ -39,15 +39,13 @@ let StoryController = class StoryController {
         stories = await Promise.all(stories.map(async (story) => {
             let amount = 0;
             let ratings = await this.ratingService.findAllByStory(story);
+            let delimetr = ratings.length || 1;
             if (ratings) {
                 ratings.forEach(rating => {
                     amount += rating.rating;
                 });
             }
-            else {
-                ratings = [];
-            }
-            story.ratingAmount = amount / ratings.length;
+            story.ratingAmount = amount / delimetr;
             return story;
         }));
         return stories.sort((a, b) => {

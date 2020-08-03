@@ -1,4 +1,4 @@
-import { Controller, Delete, Get, Put, UseGuards, Param } from '@nestjs/common';
+import { Controller, Get, UseGuards, Param } from '@nestjs/common';
 import { JwtAuthGuard } from '../../auth/guard/jwt-auth.guard';
 import { GenreService } from './genre.service';
 
@@ -18,4 +18,3 @@ export class GenreController {
         return this.genreService.findOne(id);
     }
 }
-

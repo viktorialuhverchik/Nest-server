@@ -19,13 +19,11 @@ export class UserController {
         return this.userService.findAll();
     }
 
-    @UseGuards(JwtAuthGuard)
     @Get(':id')
     findOne(@Param('id') id: number) {
         return this.userService.findOne(id);
     }
 
-    @UseGuards(JwtAuthGuard)
     @Get(':id/stories')
     async getUserStories(@Param('id') id: number) {
         let stories = await this.storyService.getStoriesByUserId(id);
@@ -73,4 +71,3 @@ export class UserController {
         }
     }
 }
-
